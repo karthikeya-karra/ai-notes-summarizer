@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Body background and text colors */
+body {
+  @apply bg-white dark:bg-gray-900 text-gray-800 dark:text-white;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Textarea styling */
+textarea {
+  @apply w-full p-4 border border-gray-300 dark:border-gray-700 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition;
+  font-size: 16px;
+}
+
+/* Buttons */
+button {
+  @apply py-2 px-4 font-medium rounded-md cursor-pointer transition;
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Summary and transcription output containers */
+.result {
+  @apply mt-3 p-4 border border-gray-200 dark:border-gray-700 rounded-md min-h-[60px] bg-gray-50 dark:bg-gray-800 whitespace-pre-wrap text-gray-800 dark:text-white;
+}
+
+/* Headings */
+h1, h2 {
+  @apply font-bold;
+}
+
+/* Minor spacing tweaks */
+hr {
+  @apply my-4 border-gray-300 dark:border-gray-600;
+}
+
+/* Dark mode smooth transition */
+.dark * {
+  transition: background-color 0.3s, color 0.3s;
+}
